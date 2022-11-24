@@ -1,0 +1,74 @@
+*, *::after, *::before{
+	box-sizing: border-box;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #0b212e;
+	background-image: linear-gradient(186deg, #0b212e 0%, #151744 100%);
+
+}
+.circle{
+	width: 600px;
+	height: 600px;
+	box-shadow: 0 0 10vh 15px #0093E9;
+	border-radius: 50%;
+	position: relative;
+}
+.circle .number{
+	--rotation: 0;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	color: #0093E9;
+	font-size: 2rem;
+	transform: rotate(var(--rotation));
+}
+.circle .hand {
+	--rotation: 0;
+	position: absolute;
+	bottom: 50%;
+	left: 49%;
+	border-radius: 10px;
+	z-index: 10;
+	transform-origin: bottom;
+	transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+	background: #0093E9;
+}
+.circle::after{
+	content: '';
+	position: absolute;
+	background: #0093E9;
+	z-index: 11;
+	width: 15px;
+	height: 15px;
+	top: 50%;
+	left: 50%;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+}
+.circle .hand.minute{
+	width: 7px;
+	height: 40%;
+	background: #0093E9;
+}
+.circle .hand.hour{
+	width: 10px;
+	height: 35%;
+	background: #0093E9;
+}
+.circle .number1{--rotation: 30deg;}
+.circle .number2{--rotation: 60deg;}
+.circle .number3{--rotation: 90deg;}
+.circle .number4{--rotation: 120deg;}
+.circle .number5{--rotation: 150deg;}
+.circle .number6{--rotation: 180deg;}
+.circle .number7{--rotation: 210deg;}
+.circle .number8{--rotation: 240deg;}
+.circle .number9{--rotation: 270deg;}
+.circle .number10{--rotation: 300deg;}
+.circle .number11{--rotation: 330deg;}
